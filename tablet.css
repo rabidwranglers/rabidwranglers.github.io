@@ -1,0 +1,38 @@
+@media screen and (max-width:800px) {
+    .companyName .main {
+        font-size: 30px;
+    }
+
+    .column {
+        width: 100%;
+        float: none;
+    }
+
+    .column.aboutMe {
+        width: 100%;
+    }
+
+    .columnContent {
+        height: auto;
+    }
+
+    .companyInfo .serviceArea {
+        font-size: 20px;
+    }
+
+    .companyInfo .contactInfo {
+        font-size: 20px;
+    }
+
+    .proprietor .proprietorName {
+        margin-left: 0;
+        display: block;
+        position: inherit;
+        top: 0;
+        margin-top: 10px;
+    }
+
+    .aboutMe p {
+        padding-top: 20px;
+    }
+}

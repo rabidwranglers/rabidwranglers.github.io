@@ -1,0 +1,86 @@
+body {
+    background-color: rgb(229, 214, 193);
+    margin: 0;
+    padding: 0;
+    border-width: 0;
+    font-family: 'Ubuntu';
+}
+
+.header {
+    text-align: center;
+}
+
+.companyInfo {
+    text-align: center;
+}
+
+.companyName {
+    font-family: 'Sigmar One';
+}
+
+.companyName .main {
+    font-size: 50px;
+}
+
+.companyName .additional {
+    font-size: 30px;
+    margin-top: -20px;
+}
+
+.header img {
+    padding-right: 20px;
+}
+
+.proprietor {
+    height: 70px;
+}
+
+.proprietor .proprietorName {
+    font-weight: bold;
+    font-size: 20px;
+    margin-left: 10px;
+    display: inline-block;
+    position: relative;
+    top: -30px;
+}
+
+.whatWeDo .columnHeader {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.companyInfo .serviceArea {
+    font-size: 25px;
+    margin-bottom: 5px;
+}
+
+.companyInfo .contactInfo {
+    font-size: 25px;
+}
+
+.content:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.column {
+    float: left;
+    width: 70%;
+}
+
+.column.aboutMe {
+    width: 30%;
+}
+
+.columnContent {
+    background-color: rgb(203, 172, 131);
+    margin: 15px;
+    padding: 10px;
+    border-radius: 10px;
+    height: 400px;
+}
+
+img.footprint {
+    opacity: .3;
+}
