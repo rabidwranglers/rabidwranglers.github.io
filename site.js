@@ -1,7 +1,7 @@
 function createFootprints() {
     var img, i, top, right;
-    for (i = 1; i < 7; i++) {
-        top = i % 2 ? '5' : '30';
+    for (i = 1; i < 8; i++) {
+        top = i % 2 ? '30' : '5 ';
         right = i * 60;
 
         img = document.createElement('img');

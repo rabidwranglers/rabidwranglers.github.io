@@ -16,6 +16,7 @@ body {
 
 .companyName {
     font-family: 'Sigmar One';
+    color: rgb(68, 100, 60);
 }
 
 .companyName .main {
