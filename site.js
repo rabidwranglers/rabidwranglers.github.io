@@ -1,13 +1,13 @@
 function createFootprints() {
     var img, i, top, right;
     for (i = 1; i < 8; i++) {
-        top = i % 2 ? '30' : '5 ';
+        top = i % 2 ? '30' : '5';
         right = i * 60;
 
         img = document.createElement('img');
         img.className = 'footprint';
         img.setAttribute('src', './images/footprint-right-down.png');
-        img.setAttribute('style', 'position: absolute; top: ' + top + 'px; right: ' + right.toString() + 'px;');
+        img.setAttribute('style', 'position: absolute; top: ' + top.toString() + 'px; right: ' + right.toString() + 'px;');
 
         document.body.appendChild(img);
     }
