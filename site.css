@@ -6,11 +6,12 @@ body {
     font-family: 'Ubuntu';
 }
 
-.rat-down {
+.fat-rat {
     position: fixed;
     top: 0;
     left: 0;
-    opacity: .5;
+    opacity: 1;
+    max-height: 40%;
 }
 
 .header {
@@ -90,5 +91,5 @@ body {
 }
 
 img.footprint {
-    opacity: .3;
+        opacity: .3;
 }

@@ -74,12 +74,14 @@ var creepyRats = [{
     left: 44
 }];
 
+var animationIterations = 0;
+
 function animateRats() {
     for (var i = 0; i < creepyRats.length; i++) {
         var creepyRat = creepyRats[i];
         var img = document.createElement('img');
-        img.className = 'rat-down';
-        img.setAttribute('src', './images/rat-down.png');
+        img.className = 'fat-rat';
+        img.setAttribute('src', './images/fat-rat.png');
         img.setAttribute('id', creepyRat.id);
         img.setAttribute('style', 'top: ' + creepyRat.top + '%; left ' + creepyRat.left + '%;');
 
@@ -104,7 +106,10 @@ function bumpRatPositions() {
         el.setAttribute('style', 'top: ' + creepyRat.top + '%; left: ' + creepyRat.left + '%');
     }
 
-    setTimeout(bumpRatPositions, 25);
+    if (animationIterations < 200) {
+        animationIterations++;
+        setTimeout(bumpRatPositions, 25);
+    }
 }
 
 createFootprints();
