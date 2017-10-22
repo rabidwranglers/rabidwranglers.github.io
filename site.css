@@ -6,6 +6,13 @@ body {
     font-family: 'Ubuntu';
 }
 
+.rat-down {
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity: .5;
+}
+
 .header {
     text-align: center;
 }

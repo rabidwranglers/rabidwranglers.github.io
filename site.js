@@ -1,7 +1,7 @@
 function createFootprints() {
     var img, i, top, right;
-    for (i = 1; i < 8; i++) {
-        top = i % 2 ? '30' : '5';
+    for (i = 1; i < 9; i++) {
+        top = (i % 2 ? 5 : 30) + ((9 - i) * 5);
         right = i * 60;
 
         img = document.createElement('img');
@@ -11,7 +11,7 @@ function createFootprints() {
 
         document.body.appendChild(img);
     }
-    for (i = 1; i < 11; i++) {
+    for (i = 2; i < 11; i++) {
         top = i * 60;
         right = i % 2 ? '5' : '30';
 
@@ -24,4 +24,88 @@ function createFootprints() {
     }
 }
 
+var creepyRats = [{
+    id: 'rat0',
+    top: 0,
+    left: 2
+}, {
+    id: 'rat1',
+    top: 6,
+    left: 10
+}, {
+    id: 'rat2',
+    top: 11,
+    left: 47
+}, {
+    id: 'rat3',
+    top: 36,
+    left: 67
+}, {
+    id: 'rat4',
+    top: 4,
+    left: 52
+}, {
+    id: 'rat5',
+    top: 39,
+    left: 88
+}, {
+    id: 'rat6',
+    top: 17,
+    left: 28
+}, {
+    id: 'rat7',
+    top: 67,
+    left: 3
+}, {
+    id: 'rat8',
+    top: 54,
+    left: 5
+}, {
+    id: 'rat9',
+    top: 78,
+    left: 11
+}, {
+    id: 'rat10',
+    top: 50,
+    left: 8
+}, {
+    id: 'rat11',
+    top: 44,
+    left: 44
+}];
+
+function animateRats() {
+    for (var i = 0; i < creepyRats.length; i++) {
+        var creepyRat = creepyRats[i];
+        var img = document.createElement('img');
+        img.className = 'rat-down';
+        img.setAttribute('src', './images/rat-down.png');
+        img.setAttribute('id', creepyRat.id);
+        img.setAttribute('style', 'top: ' + creepyRat.top + '%; left ' + creepyRat.left + '%;');
+
+        document.body.appendChild(img);
+    }
+
+    bumpRatPositions();
+}
+
+function bumpRatPositions() {
+    for (var i = 0; i < creepyRats.length; i++) {
+        var creepyRat = creepyRats[i];
+        var el = document.getElementById(creepyRat.id);
+
+        if (i % 2) {
+            creepyRat.top = creepyRat.top + 1;
+        } else {
+            creepyRat.top = creepyRat.top + 2;
+        }
+        creepyRat.left = creepyRat.left + 1;
+
+        el.setAttribute('style', 'top: ' + creepyRat.top + '%; left: ' + creepyRat.left + '%');
+    }
+
+    setTimeout(bumpRatPositions, 25);
+}
+
 createFootprints();
+animateRats();
