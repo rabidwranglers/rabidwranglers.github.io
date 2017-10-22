@@ -10,8 +10,8 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    opacity: 1;
-    max-width: 40%;
+    opacity: .5;
+    max-width: 30%;
 }
 
 .header {
