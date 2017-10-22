@@ -96,7 +96,7 @@ function bumpRatPositions() {
         var creepyRat = creepyRats[i];
         var el = document.getElementById(creepyRat.id);
 
-        if (i % 2) {
+        if ((i * animationIterations) % 2) {
             creepyRat.top = creepyRat.top + 1;
         } else {
             creepyRat.top = creepyRat.top + 2;
